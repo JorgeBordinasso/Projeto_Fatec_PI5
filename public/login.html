@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container" style="color: black ;">
+        <form action="/loginUser" method="get">
+            <div class="posiLog">
+                <img src="img/iconUser.png" alt="logo" class="logoLogin">
+                <h3 style="font-size: 40px; text-align: start;">Login</h3>
+                <a style="text-align: start; margin-top: 10px;" >Use sua conta do google</a>
+            </div>
+            <div class="item2">
+                <input class="input" type="email" placeholder="Email" required>
+                <a id="logGoog" style="cursor: pointer;">Emtrar com o Google?</a>
+            </div>
+            <div class="item3">
+                <a style="width: 100%; color: #0056b3; cursor: pointer;" id="cadConta">Criar conta</a>
+                <button type="button" id="btn" class="botao">Proximo</button>
+            </div>
+            <div class="item4">
+                <a style="width: 100%; color: #0056b3; cursor: pointer;" id="voltarLogin">« Voltar</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('voltarLogin').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '/';
+        });
+        document.getElementById('cadConta').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '/cad';
+        });
+        document.getElementById('logGoog').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '/loginGoogle';
+        });
+    </script>
+</body>
+
+</html>

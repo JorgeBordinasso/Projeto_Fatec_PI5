@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body >
+    <div class="container" id="containerName" style="color: black ;">
+        <form id="formCad1" action="/nome" method="post">
+            <div class="posiLog">
+                <img src="img/iconUser.png" alt="logo" class="logoLogin">
+                <h3 style="font-size: 40px; text-align: start;">Criar uma conta</h3>
+                <p style="text-align: start; margin-top: 10px;">Use sua conta do google</p>
+            </div>
+            <div class="item2">
+                <input class="input" id="nome" type="text" placeholder="Nome" required>
+                <input class="input" id="sobrenome" type="text" placeholder="Sobrenome (opcional)">
+            </div>
+            <div class="item3">
+                <a style="width: 100%; color: #0056b3;">Criar conta</a>
+                <button type="button" id="btnCadNome" class="botao">Avançar</button>
+            </div>
+            <div class="item4">
+                <a style="width: 100%; color: #0056b3; cursor: pointer;" id="voltarName">« Voltar</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="container" id="containerDTA" style="display: none;color: black ;">
+        <form id="formCad2" action="/data" method="post">
+            <div class="posiLog">
+                <img src="img/iconUser.png" alt="logo" class="logoLogin">
+                <h3 style="font-size: 40px; text-align: start;">Informações</h3>
+                <h3 style="font-size: 40px; text-align: start;">básicas</h3>
+                <p style="text-align: start; margin-top: 10px;">Digite sua data de nascimento e gênero</p>
+            </div>
+            <div class="itemData">
+                <input class="input" id="Dia" type="text" placeholder="Dia" required>
+                <select class="inputdata" id="mes">
+                    <option value="" disabled selected hidden>Mês</option>
+                    <option value="opcao1">Opção 1</option>
+                    <option value="opcao2">Opção 2</option>
+                    <option value="opcao3">Opção 3</option>
+                </select>
+                <input class="input" id="ano" type="text" placeholder="Ano">
+            </div>
+            <div class="item5">
+                <select class="inputdata" id="genero" required>
+                    <option value="" disabled selected hidden>Gênero</option>
+                    <option value="opcao1">Mulher</option>
+                    <option value="opcao2">Homen</option>
+                    <option value="opcao3">Prefiro não informar</option>
+                </select>
+            </div>
+            <div class="item3">
+                <a style="width: 100%; color: #0056b3;">Criar conta</a>
+                <button type="button" id="btnCadData" class="botao">Avançar</button>
+            </div>
+            <div class="item4">
+                <a style="width: 100%; color: #0056b3; cursor: pointer;" id="voltarData">« Voltar</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="container" id="containerSenha" style="display: none;color: black ;">
+        <form id="formCad3" action="/senha" method="post">
+            <div class="posiLog">
+                <img src="img/iconUser.png" alt="logo" class="logoLogin">
+                <h3 style="font-size: 40px; text-align: start;">Crie uma senha <br> forte</h3>
+                <p style="text-align: start; margin-top: 10px;">Crie uma senha forte com uma combinação <br> de letras,
+                    números e símbolos</p>
+            </div>
+            <div class="item2">
+                <input class="input" id="Senha" type="password" placeholder="Senha" required>
+                <input class="input" id="ComfirmarSenha" type="password" placeholder="Comfirmar senha">
+            </div>
+            <div class="item3">
+                <button type="button" id="btnFinalizar" class="botao">Finalizar</button>
+            </div>
+            <div class="item4">
+                <a style="width: 100%; color: #0056b3; cursor: pointer;" id="voltarSenha">« Voltar</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/scriptCad.js"></script>
+    <script>
+       document.getElementById('voltarName').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '/';
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html">
+                <img src="img/logo.png" class="imgLogo" alt="logo">
+            </a>
+            <div class="items">
+                <table>
+                    <tr class="links">
+                        <td class="alinks"><a style="text-decoration: none; color: black;" href="sobre.html"
+                                class="aitems">Sobre</a></td>
+                        <td class="alinks"><a class="aitems">Fale Conosco</a></td>
+                        <td class="alinks"><a class="aitems" id="login">Login</a></td>
+                    </tr>
+                </table>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="content">
+                <h1>Casas Express</h1>
+                <h3>Pesquise a casa dos seus sonhos</h3>
+                <div class="barrabutton">
+                    <input class="inputpesquisa" type="text" placeholder="Digite um bairro">
+                    <button type="button" id="btn" class="botaopesquisar">Pesquisar</button>
+                </div>
+                <!-- <div>
+                    <button>Locador</button>
+                    <button>Locatario</button>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <div class="container2">
+        <h2 class="bairrosmaispesquisados">Bairros mais pesquisados</h2>
+        <div class="divcard">
+            <div class="card">
+                <h3 class="imgBairros">Centro</h3>
+            </div>
+            <div class="card">
+                <h3 class="imgBairros">Laranjeiras</h3>
+            </div>
+            <div class="card">
+                <h3 class="imgBairros">Bela Vista</h3>
+            </div>
+            <div class="card">
+                <h3 class="imgBairros">Vila Buscardi</h3>
+            </div>
+        </div>
+        <!-- <div class="divcard2">
+            <div class="card">
+                <h3 class="imgBairros">Sto Antônio</h3>
+            </div>
+            <div class="card">
+                <h3 class="imgBairros">Talavasso</h3>
+            </div>
+            <div class="card">
+                <h3 class="imgBairros">Cecap</h3>
+            </div>
+        </div> -->
+    </div>
+    <hr>
+    <div class="divMobile">
+        <div>
+            <h1 style="margin-bottom: 20px;">Baixe o nosso app:</h1>
+            <div class="divDownload">
+                <button class="btnDownload"><img class="imgGooglePlay" src="img/google_Play.png" alt="google play">
+                    <span>Download</span></button>
+                <button class="btnDownload"><img class="imgAppleStore" src="img/apple_Store (2).png" alt="google play">
+                    <span>Download</span></button>
+            </div>
+        </div>
+        <div style="margin-top:4%;">
+            <iframe
+                src="https://appetize.io/embed/vesv2fdfihxqdf2mf4t4gm2ogu?device=pixel7&launchUrl=exp%3A%2F%2Fu.expo.dev%2F933fd9c0-1666-11e7-afca-d980795c5824%3Fruntime-version%3Dexposdk%253A50.0.0%26channel-name%3Dproduction%26snack%3D%2540edson123%252Fcauculadora%26snack-channel%3DWYbdCFZjhr&params=%7B%22EXDevMenuDisableAutoLaunch%22%3Atrue%2C%22EXKernelDisableNuxDefaultsKey%22%3Atrue%7D&appearance=light&deviceColor=black&scale=auto&orientation=portrait&centered=both"
+                width="350px" height="700px" scrolling="no" frameborder="0" allowtransparency="true">
+            </iframe>
+
+        </div>
+
+    </div>
+    <hr>
+    <footer>
+        <h1 class="h1Footer">Fale Conosco</h1>
+
+        <form action="#">
+            <!-- <label class="campo" for="nome">Nome:</label> -->
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+            <!-- <label class="campo" for="email">E-mail:</label> -->
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+            <!-- <label class="campo" for="telefone">Telefone:</label> -->
+            <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+            <!-- <label class="campo" for="mensagem">Mensagem:</label> -->
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="3" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
+    <div class="copy">
+        <p>&copy - Todos os direitos reservados</p>
+    </div>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script>
+        document.getElementById('login').addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = '/login';
+        });
+    </script>
+
+
+
+</body>
+
+</html>
