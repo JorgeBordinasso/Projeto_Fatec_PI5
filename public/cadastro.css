@@ -1,0 +1,102 @@
+/* login.css */
+.logoLogin {
+    width: 50px;
+    height: 50px;
+}
+
+.posiLog {
+    position: absolute;
+    top: 37%;
+    left: 6%;
+}
+
+.item2 {
+    position: absolute;
+    top: 42%;
+    left: 49%;
+    width: 42%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.itemData {
+    position: absolute;
+    top: 42%;
+    left: 53%;
+    width: 42%;
+    display: flex;
+    gap: 10px;
+}
+.item5 {
+    position: absolute;
+    top: 48%;
+    left: 53%;
+    width: 42%;
+}
+
+.item3 {
+    position: absolute;
+    top: 57%;
+    left: 72%;
+    display: flex;
+    width: 23%;
+    align-items: center;
+}
+.item4 {
+    position: absolute;
+    top: 62%;
+    right: 72%;
+    display: flex;
+    width: 23%;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 100%;
+    padding: 60px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 20%;
+}
+
+.input {
+    padding: 15px;
+    width: 100%;
+    font-size: medium;
+    border: 1px solid black;
+    height: 15px;
+}
+select.inputdata {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    font-size: small;
+    border-radius: 5px;
+    border: 1px solid black;
+    /* height: 15px; */
+}
+
+.botao {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
