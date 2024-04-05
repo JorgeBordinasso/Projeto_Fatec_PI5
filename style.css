@@ -269,7 +269,14 @@ footer {
 .sobreEmpresa {
     display: flex;
     justify-content: space-evenly;
+    background-color: #cacbcd;
+}
+
+.sobreDevs{
+    display: flex;
+    justify-content: space-evenly;
     background-color: #E9ECEF;
+    margin-top: 50px;
 }
 
 .imagemEmpresa {
@@ -318,5 +325,8 @@ footer {
 
 .classeLi {
     font-size: 17px;
+}
 
+.descricaoEmpresa{
+    padding: 50px;
 }
