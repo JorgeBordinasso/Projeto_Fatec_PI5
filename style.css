@@ -32,7 +32,7 @@ header {
 .links {
     display: flex;
     gap: 30%;
-    padding-right: 230px;
+    padding-right: 280px;
 
 }
 
@@ -89,7 +89,7 @@ h3 {
 
 .alinks {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 35px;
     color: black;
     font-weight: bold;
     transition: transform 0.3s ease;
