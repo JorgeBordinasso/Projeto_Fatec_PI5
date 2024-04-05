@@ -71,12 +71,14 @@
         </div> -->
     </div>
     <hr>
-    <div class="divMobile">
+    <div class="divMobile" id="app">
         <div>
             <h1 style="margin-bottom: 20px;">Baixe o nosso app:</h1>
             <div class="divDownload">
-                <button class="btnDownload"><img class="imgGooglePlay" src="img/google_Play.png" alt="google play">
-                    <span>Download</span></button>
+                <a style="text-decoration: none;" href="app/application-7f60cc0a-3bdd-4f73-b182-b367f2e9e7ad.apk" download>
+                    <button class="btnDownload"><img class="imgGooglePlay" src="img/google_Play.png" alt="google play">
+                        <span>Download</span></button>
+                </a>
                 <button class="btnDownload"><img class="imgAppleStore" src="img/apple_Store (2).png" alt="google play">
                     <span>Download</span></button>
             </div>
@@ -115,14 +117,39 @@
     </div>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script>
-        document.getElementById('login').addEventListener('click', function (event) {
-            event.preventDefault();
-            window.location.href = '/login';
+        $(document).ready(function () {
+            $("#login").click(function () {
+                $("#modal").show()
+            });
+            $("#appDow").click(function () {
+                $("#modal").hide()
+            });
+            $('#btnPross').click(function (event) {
+                event.preventDefault();
+                window.location.href = '/login';
+            });
         });
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
     </script>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span style="font-size: 50px;" class="close" onclick="closeModal()">&times;</span>
+            <h2>Atenção!</h2>
+            <p>Prezados usuários,
 
+                A seção de login de usuários é exclusiva para imobiliárias e locatários, pois este site é dedicado às
+                pessoas que desejam alugar um imóvel. Caso você esteja interessado em alugar um imóvel, por favor, baixe
+                o nosso <a id="appDow" href="#app">aplicativo!</a>
 
-
+                Agradecemos pela compreensão e interesse em nossa plataforma.</p>
+            <br>
+            <button type="button" id="btnPross" class="botao">Prosseguir</button>
+        </div>
+    </div>
 </body>
 
 </html>
