@@ -18,8 +18,7 @@
             <div class="items">
                 <table>
                     <tr class="links">
-                        <td class="alinks"><a style="text-decoration: none; color: black;" href="sobre.html"
-                                class="aitems">Sobre</a></td>
+                        <td class="alinks"><a href="sobre.html" class="aitems sobre">Sobre</a></td>
                         <td class="alinks"><a class="aitems">Fale Conosco</a></td>
                         <td class="alinks"><a class="aitems" id="login">Login</a></td>
                     </tr>
@@ -29,10 +28,10 @@
 
         <div class="container">
             <div class="content">
-                <h1>Casas Express</h1>
-                <h3>Pesquise a casa dos seus sonhos</h3>
+                <h1 class="NomeEmpresa">Casas Express</h1>
+                <h3>Entre em contato com uma Imobiliária:</h3>
                 <div class="barrabutton">
-                    <input class="inputpesquisa" type="text" placeholder="Digite um bairro">
+                    <input class="inputpesquisa" type="text" placeholder="Digite o nome da imobiliária">
                     <button type="button" id="btn" class="botaopesquisar">Pesquisar</button>
                 </div>
                 <!-- <div>
@@ -43,19 +42,19 @@
         </div>
     </header>
     <div class="container2">
-        <h2 class="bairrosmaispesquisados">Bairros mais pesquisados</h2>
-        <div class="divcard">
-            <div class="card">
-                <h3 class="imgBairros">Centro</h3>
+        <h2 class="bairrosmaispesquisados">IMOBILIÁRIAS MAIS PESQUISADAS</h2>
+        <div class="divcard" id="divcard">
+            <div class="cardGis" id="teste">
+                <h3 class="imgBairros">Gis</h3>
             </div>
-            <div class="card">
-                <h3 class="imgBairros">Laranjeiras</h3>
+            <div class="cardPotal">
+                <h3 class="imgBairros">Portal imóveis</h3>
             </div>
-            <div class="card">
-                <h3 class="imgBairros">Bela Vista</h3>
+            <div class="cardSales">
+                <h3 class="imgBairros">Sales Js</h3>
             </div>
-            <div class="card">
-                <h3 class="imgBairros">Vila Buscardi</h3>
+            <div class="cardLiam">
+                <h3 class="imgBairros">Liam imóveis</h3>
             </div>
         </div>
         <!-- <div class="divcard2">
@@ -75,7 +74,8 @@
         <div>
             <h1 style="margin-bottom: 20px;">Baixe o nosso app:</h1>
             <div class="divDownload">
-                <a style="text-decoration: none;" href="app/application-7f60cc0a-3bdd-4f73-b182-b367f2e9e7ad.apk" download>
+                <a style="text-decoration: none;" href="app/application-7f60cc0a-3bdd-4f73-b182-b367f2e9e7ad.apk"
+                    download>
                     <button class="btnDownload"><img class="imgGooglePlay" src="img/google_Play.png" alt="google play">
                         <span>Download</span></button>
                 </a>
@@ -134,6 +134,32 @@
             document.getElementById('modal').style.display = 'none';
         }
 
+        document.getElementById('teste').addEventListener('click', function () {
+            document.getElementById('modal2').style.display = 'block';
+        })
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var divcard = document.getElementById("divcard");
+
+            function checkAnimation() {
+                var position = divcard.getBoundingClientRect().top;
+                var screenPosition = window.innerHeight / 1.3;
+
+                if (position < screenPosition) {
+                    divcard.classList.add("animate");
+                } else {
+                    divcard.classList.remove("animate");
+                }
+            }
+
+            window.addEventListener("scroll", checkAnimation);
+            window.addEventListener("resize", checkAnimation);
+
+            checkAnimation();
+        });
+
+
+
     </script>
     <div class="modal" id="modal">
         <div class="modal-content">
@@ -141,13 +167,34 @@
             <h2>Atenção!</h2>
             <p>Prezados usuários,
 
-                A seção de login de usuários é exclusiva para imobiliárias e locatários, pois este site é dedicado às
-                pessoas que desejam alugar um imóvel. Caso você esteja interessado em alugar um imóvel, por favor, baixe
+                A seção de login de usuários é exclusiva para imobiliárias e locatários, pois este site é dedicado a
+                quem deseja colocar um imóvel para alugar. Caso você esteja interessado em alugar um imóvel, por favor,
+                baixe
                 o nosso <a id="appDow" href="#app">aplicativo!</a>
 
                 Agradecemos pela compreensão e interesse em nossa plataforma.</p>
             <br>
-            <button type="button" id="btnPross" class="botao">Prosseguir</button>
+            <button type="button" id="btnPross" class="botao">Fazer login como imobiliária ou locatário</button>
+        </div>
+    </div>
+    <div class="modal2" id="modal2">
+        <div class="modal-content">
+            <span style="font-size: 50px;" class="close" onclick="closeModal()">&times;</span>
+            <form action="#">
+                <!-- <label class="campo" for="nome">Nome:</label> -->
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+                <!-- <label class="campo" for="email">E-mail:</label> -->
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+
+                <!-- <label class="campo" for="telefone">Telefone:</label> -->
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+                <!-- <label class="campo" for="mensagem">Mensagem:</label> -->
+                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="3" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </div>
 </body>
