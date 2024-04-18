@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #E9ECEF;
+    background-color: white;
 }
 
 .navbar {
@@ -357,6 +357,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     padding-bottom: 56px;
+    background-color: #cacbcd;
 }
 
 .divDownload {
@@ -468,13 +469,26 @@ button:hover {
     display: flex;
     justify-content: space-evenly;
     background-color: #cacbcd;
+    padding-top: 170px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nossaVisao{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    margin-top: 50px;
+    padding: 8px;  
 }
 
 .sobreDevs {
     display: flex;
     justify-content: space-evenly;
-    background-color: #E9ECEF;
+    background-color:  #cacbcd;
     margin-top: 50px;
+    padding: 60px;
 }
 
 .imagemEmpresa {
@@ -526,5 +540,6 @@ button:hover {
 }
 
 .descricaoEmpresa {
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
 }
