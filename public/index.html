@@ -19,7 +19,7 @@
                 <table>
                     <tr class="links">
                         <td class="alinks"><a href="sobre.html" class="aitems sobre">Sobre</a></td>
-                        <td class="alinks"><a class="aitems">Fale Conosco</a></td>
+                        <td class="alinks"><a class="aitems sobre" href="#footer">Fale Conosco</a></td>
                         <td class="alinks"><a class="aitems" id="login">Login</a></td>
                     </tr>
                 </table>
@@ -44,7 +44,7 @@
     <div class="container2">
         <h2 class="bairrosmaispesquisados">IMOBILIÁRIAS MAIS PESQUISADAS</h2>
         <div class="divcard" id="divcard">
-            <div class="cardGis" id="teste">
+            <div class="cardGis" id="gis">
                 <h3 class="imgBairros">Gis</h3>
             </div>
             <div class="cardPotal">
@@ -93,7 +93,7 @@
 
     </div>
     <hr>
-    <footer>
+    <footer id="footer">
         <h1 class="h1Footer">Fale Conosco</h1>
 
         <form action="#">
@@ -133,8 +133,11 @@
         function closeModal() {
             document.getElementById('modal').style.display = 'none';
         }
+        function closeGis() {
+            document.getElementById('modal2').style.display = 'none';
+        }
 
-        document.getElementById('teste').addEventListener('click', function () {
+        document.getElementById('gis').addEventListener('click', function () {
             document.getElementById('modal2').style.display = 'block';
         })
 
@@ -179,22 +182,50 @@
     </div>
     <div class="modal2" id="modal2">
         <div class="modal-content">
-            <span style="font-size: 50px;" class="close" onclick="closeModal()">&times;</span>
-            <form action="#">
-                <!-- <label class="campo" for="nome">Nome:</label> -->
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            <span style="font-size: 50px; z-index: 1;" class="close" onclick="closeGis()">&times;</span>
+            <div class="info">
+                <div class="fotosG">
+                    <div class="fotosGmas">
+                        <div class="foto1Con fotoborder">
+                            <img class="foto1" src="img/logogis.png">
+                        </div>
+                        <div class="foto1 fotoborder">
+                            <img class="foto1" src="img/logogis.png">
+                        </div>
+                        <div class="foto1 fotoborder">
+                            <img class="foto1" src="img/logogis.png">
+                        </div>
+                        <!-- <div class="foto">
+                            <img src="img/logogis.png">
+                        </div>
+                        <div class="foto">
+                            <img src="img/logogis.png">
+                        </div> -->
+                    </div>
+                    <div>
+                        <img src="img/logogis.png" class="fotoPrincipal">
+                    </div>
+                </div>
+            </div>
+            <div class="contato">
+                <h2 style="text-align: center;">Contato:</h2>
+                <form action="#">
+                    <!-- <label class="campo" for="nome">Nome:</label> -->
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
 
-                <!-- <label class="campo" for="email">E-mail:</label> -->
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    <!-- <label class="campo" for="email">E-mail:</label> -->
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
 
-                <!-- <label class="campo" for="telefone">Telefone:</label> -->
-                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+                    <!-- <label class="campo" for="telefone">Telefone:</label> -->
+                    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
 
-                <!-- <label class="campo" for="mensagem">Mensagem:</label> -->
-                <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="3" required></textarea>
+                    <!-- <label class="campo" for="mensagem">Mensagem:</label> -->
+                    <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="3"
+                        required></textarea>
 
-                <button type="submit">Enviar</button>
-            </form>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
     </div>
 </body>

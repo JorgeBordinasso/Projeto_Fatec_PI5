@@ -403,6 +403,7 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: auto;
+    /* overflow-y: hidden; */
 }
 
 .modal-content {
@@ -456,6 +457,39 @@ button:hover {
 .animate {
     animation-duration: 1s;
     animation-name: slidein;
+}
+
+.info{
+    display: flex;
+    /* gap: 15px; */
+}
+
+
+.foto1{
+    width: 200px;
+    height: 200px;
+}
+.foto1Con{
+    width: 200px;
+    height: 200px;
+}
+
+.fotoborder{
+    border: 1px solid;
+}
+
+.fotosG{
+    display: flex;
+}
+
+.fotoPrincipal{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.contato{
+    padding: 20px;
 }
 
 /* CSS página SOBRE */
